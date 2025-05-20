@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Information</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="../CSS/information.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="left">
+          <div class="logo">
+            <img src="../source/Logo & menu.png" alt="logo" />
+          </div>
+          <nav class="menu">
+            <a href="../HTML/home.html"
+              ><img src="../source/home.png" alt="" /> Trang chủ</a
+            >
+            <a href="../HTML/post.html"
+              ><img src="../source/book.png" alt="" /> Bài viết</a
+            >
+          </nav>
+        </div>
+        <div class="right">
+          <a href="searchPage.html"
+            ><img src="../source/search-normal.png" id="search-toggle" alt=""
+          /></a>
+          <i
+            class="fa-solid fa-bell"
+            id="noticeBell"
+            onclick="toggleNotice()"
+          ></i>
+          <img
+            src="../source/Dropdown.png"
+            alt="avatar"
+            class="avatar"
+            onclick="toggleDropdown()"
+          />
+        </div>
+        <div class="menu-icon" onclick="toggleResponsive()">
+          <img src="../source/menu.png" alt="" />
+        </div>
+        <div class="dropdownResponsive" id="responsiveList">
+          <a href="../HTML/home.html"
+            ><img src="../source/home.png" alt="" /> Trang chủ</a
+          >
+          <a href="../HTML/post.html"
+            ><img src="../source/book.png" alt="" /> Bài viết</a
+          >
+          <hr />
+          <a href="information.html">Hồ sơ</a>
+          <a href="course.html">Khóa học</a>
+
+          <hr />
+          <a href="home.html">
+            <img src="../source/Dropdown.png" alt="avatar" class="avatar" />
+            <span id="responsiveUsername"></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="dropdown" id="dropdownList">
+        <a href="home.html">
+          <img src="../source/Dropdown.png" alt="avatar" class="avatar" />
+          <span id="username"></span>
+        </a>
+        <hr />
+        <a href="information.html">Hồ sơ</a>
+        <a href="course.html">Khóa học</a>
+
+        <hr />
+        <a id="logout" href="login.html"
+          ><i class="fa-solid fa-right-from-bracket"></i
+          ><span>Đăng xuất</span></a
+        >
+      </div>
+    </header>
+
+    <!-- main -->
+    <div class="containerFile">
+      <div class="intro">
+        <h2>Chỉnh sửa thông tin</h2>
+        <p>
+          Tại đây bạn có thể xem các thông tin hiển thị của mình và chỉnh sửa
+          ảnh đại diện. Các thông tin cá nhân còn lại là mặc định và không thể
+          chỉnh sửa.
+        </p>
+      </div>
+
+      <div class="content">
+        <div class="avatarInformation">
+          <h4>Ảnh đại diện</h4>
+          <img src="/source/Avatar.png" />
+          <p>Kích thước ảnh nhỏ nhất: 200 x 200px, định dạng PNG hoặc JPG</p>
+        </div>
+
+        <div class="informationSubmit">
+          <h4>Thông tin cá nhân</h4>
+          <form>
+            <div class="form-group">
+              <label for="surname">Họ</label>
+              <input type="text" id="surname" name="surname" disabled />
+            </div>
+
+            <div class="form-group">
+              <label for="name">Tên</label>
+              <input type="text" id="name" name="name" disabled />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" disabled />
+            </div>
+
+            <div class="form-group">
+              <label for="date">Ngày sinh</label>
+              <input type="text" id="date" name="date" disabled />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Số điện thoại</label>
+              <input type="text" id="phone" name="phone" disabled />
+            </div>
+
+            <div class="form-group">
+              <label for="studentCode">Mã sinh viên</label>
+              <input type="text" id="studentCode" name="studentCode" disabled />
+            </div>
+
+            <button
+              type="button"
+              style="display: flex; gap: 7px"
+              data-bs-toggle="modal"
+              data-bs-target="#changePasswordModal"
+            >
+              <!-- //them ảnh lock vào -->
+              <img
+                style="width: 20px; height: auto"
+                src="/source/lockcam.png"
+              />
+              <span>Đổi mật khẩu</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <img
+          src="../source/Frame 54.png"
+          alt="Mankai Logo"
+          style="width: 60px"
+        />
+        <h4>
+          MANKAI ACADEMY - HỌC VIỆN ĐÀO TẠO PHÁT TRIỂN TIẾNG NHẬT THỰC CHIẾN
+        </h4>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="footer-content">
+        <div class="footer-left"></div>
+        <div class="footer-column">
+          <h5>THÔNG TIN LIÊN HỆ</h5>
+          <div class="contact-item">
+            <img src="../source/Address.png" alt="icon" class="contact-icon" />
+            <div>
+              <strong>Địa chỉ:</strong> Tòa Sông Đà, Đường Phạm Hùng, Mỹ
+              Đình,<br />
+              Nam Từ Liêm, Hà Nội
+            </div>
+          </div>
+
+          <p>
+            <strong
+              ><img class="img-footer" src="../source/hotline.png" alt="" />
+              Hotline:</strong
+            >
+            0835 652 538
+          </p>
+          <p>
+            <strong
+              ><img class="img-footer" src="../source/gmail.png" alt="" />
+              Email:</strong
+            >
+            support@mankai.edu.vn
+          </p>
+        </div>
+
+        <div class="footer-column column-mid">
+          <h5>THEO DÕI CHÚNG TÔI TẠI</h5>
+          <p>
+            <a href=""
+              ><img
+                class="icon-img"
+                src="../source/facebook.png"
+                alt="Facebook"
+            /></a>
+            <a href=""
+              ><img class="icon-img" src="../source/youtube.png" alt="YouTube"
+            /></a>
+          </p>
+        </div>
+
+        <div class="footer-column column-end">
+          <blockquote>
+            "Hạnh phúc là điểm khởi đầu của giáo dục và cũng là đích đến cuối
+            cùng. Giang, với hơn 10 năm kinh nghiệm giảng dạy và luyện thi JLPT,
+            mong muốn giúp các bạn rút ngắn thời gian, vượt qua khó khăn trong
+            việc học tiếng Nhật, và chinh phục tấm bằng JLPT. Hãy biến học tập
+            thành không chỉ là mục tiêu phát triển bản thân mà còn là hành trình
+            hạnh phúc để hiện thực hóa những giấc mơ.”
+          </blockquote>
+          <cite>— Anh Nguyễn Viết Lâm – CEO Rikkei Academy</cite>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © 2024 by Rikkei Academy - Rikkei Education - All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <div
+      class="modal fade"
+      id="changePasswordModal"
+      tabindex="-1"
+      aria-labelledby="changePasswordModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Đổi mật khẩu</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="mb-2" id="input-old">
+              <label for="old-password" class="form-label">Mật khẩu cũ</label>
+              <input type="password" id="old-password" class="form-control" />
+              <span
+                toggle="#password-field"
+                class="fa fa-fw fa-eye field-icon toggle-password"
+                id="togglePassword"
+                onclick="toggleStatus(this, 'old-password')"
+              >
+              </span>
+            </div>
+            <div class="mb-2" id="input-new">
+              <label for="new-password" class="form-label">Mật khẩu mới</label>
+              <input type="password" id="new-password" class="form-control" />
+              <span
+                toggle="#password-field"
+                class="fa fa-fw fa-eye field-icon toggle-password"
+                id="togglePassword"
+                onclick="toggleStatus(this, 'new-password')"
+              >
+              </span>
+            </div>
+            <div class="mb-2" id="input-confirm">
+              <label for="confirm-password" class="form-label"
+                >Mật khẩu mới</label
+              >
+              <input
+                type="password"
+                id="confirm-password"
+                class="form-control"
+              />
+              <span
+                toggle="#password-field"
+                class="fa fa-fw fa-eye field-icon toggle-password"
+                id="togglePassword"
+                onclick="toggleStatus(this, 'confirm-password')"
+              >
+              </span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              Hủy
+            </button>
+            <button class="btn btn-success" onclick="changePassword()">
+              Đổi mật khẩu
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <script src="../JS/information.js"></script>
+  </body>
+</html>

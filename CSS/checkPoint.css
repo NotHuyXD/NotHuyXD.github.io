@@ -1,0 +1,126 @@
+body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 260px;
+            background: #fff;
+            border-right: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .sidebar img.logo {
+            width: 140px;
+            margin-bottom: 40px;
+        }
+
+        .sidebar .nav a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar .nav a.active {
+            background: #ffecec;
+            color: #e74c3c;
+            font-weight: 600;
+        }
+
+        .sidebar .profile {
+            margin-top: auto;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .sidebar .profile img.avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .sidebar .profile p {
+            margin: 8px 0 0;
+        }
+
+        .main {
+            flex: 1;
+            background: #f6f6f6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main .header {
+            background: #666;
+            color: white;
+            padding: 16px 24px;
+            font-weight: 600;
+        }
+
+        .main .content {
+            background: #fff;
+            margin: 20px;
+            padding: 24px;
+            border-radius: 12px;
+            overflow: auto;
+            flex: 1;
+        }
+
+        .content .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th {
+            background: #ffecec;
+            color: #d33;
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+            border-top: 1px solid #eee;
+        }
+
+        .dropdown {
+            float: right;
+            padding: 4px 8px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        thead th {
+            background-color: #fdecec;
+            color: #b32025;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            position: relative;
+        }
+
+        thead th:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            top: 25%;
+            right: 0;
+            width: 1px;
+            height: 50%;
+            background-color: #f3c7c7;
+        }

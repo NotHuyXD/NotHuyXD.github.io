@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Navbar cơ bản</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="/CSS/course.css" />
+  </head>
+  <body>
+<header>
+      <div class="navbar">
+        <div class="left">
+          <div class="logo">
+            <img src="../source/Logo & menu.png" alt="logo" />
+          </div>
+          <nav class="menu">
+            <a href="../HTML/home.html"
+              ><img src="../source/home.png" alt="" /> Trang chủ</a
+            >
+            <a href="../HTML/post.html"
+              ><img src="../source/book.png" alt="" /> Bài viết</a
+            >
+          </nav>
+        </div>
+        <div class="right">
+          <a href="searchPage.html"
+            ><img src="../source/search-normal.png" id="search-toggle" alt=""
+          /></a>
+          <i
+            class="fa-solid fa-bell"
+            id="noticeBell"
+            onclick="toggleNotice()"
+          ></i>
+          <img
+            src="../source/Dropdown.png"
+            alt="avatar"
+            class="avatar"
+            onclick="toggleDropdown()"
+          />
+          <div class="dropdown" id="dropdownList">
+            <a href="home.html">
+              <img src="../source/Dropdown.png" alt="avatar" class="avatar" />
+              <span id="username"></span>
+            </a>
+            <hr />
+            <a href="information.html">Hồ sơ</a>
+            <a href="course.html">Khóa học</a>
+
+            <hr />
+            <a id="logout" href="login.html"
+              ><i class="fa-solid fa-right-from-bracket"></i
+              ><span>Đăng xuất</span></a
+            >
+          </div>
+        </div>
+        <div class="menu-icon" onclick="toggleResponsive()">
+          <img src="../source/menu.png" alt="" />
+        </div>
+        <div class="dropdownResponsive" id="responsiveList">
+          <a href="../HTML/home.html"
+            ><img src="../source/home.png" alt="" /> Trang chủ</a
+          >
+          <a href="../HTML/post.html"
+            ><img src="../source/book.png" alt="" /> Bài viết</a
+          >
+          <hr />
+          <a href="information.html">Hồ sơ</a>
+          <a href="course.html">Khóa học</a>
+
+          <hr />
+          <a href="home.html">
+            <img src="../source/Dropdown.png" alt="avatar" class="avatar" />
+            <span id="responsiveUsername"></span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <!-- span -->
+    <div class="background-box position-relative">
+      <div class="overlay position-absolute w-100 h-100"></div>
+      <div class="content position-relative text-white p-4">
+        <div class="span">
+          <div class="quote-box position-relative p-4 text-white">
+            <div class="quote-icon top-left position-absolute">
+              <img
+                id="left"
+                style="color: #fef6e8"
+                src="/source/phaytrai.png"
+              />
+            </div>
+
+            <p class="mb-0" id="content">
+              Hạnh phúc là điểm khởi đầu của giáo dục và cũng là đích đến cuối
+              cùng. Giang, với <strong>hơn 10 năm kinh nghiệm</strong> giảng dạy
+              và luyện thi JLPT, mong muốn giúp các bạn rút ngắn thời gian, vượt
+              qua khó khăn trong việc học tiếng Nhật, và
+              <strong>chinh phục tấm bằng JLPT</strong>. Hãy biến học tập thành
+              không chỉ là mục tiêu phát triển bản thân mà còn là hành trình
+              hạnh phúc để hiện thực hóa những giấc mơ.
+            </p>
+
+            <div class="quote-icon bottom-right position-absolute">
+              <img
+                id="right"
+                style="color: #fef6e8"
+                src="/source/phayphai.png"
+              />
+            </div>
+          </div>
+          <div class="imgSpan">
+            <img src="/source/spanhome3.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tất cả khóa học -->
+    <section class="courses-section py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold">TẤT CẢ KHÓA HỌC</h2>
+        <div class="row g-4" id="course-container"></div>
+          <!-- Một ô khóa học (Bootstrap)-->
+      <div id="pagination"></div>
+      <div id="responsivePagination">
+        <button onclick="downNumResponsive()">←</button>
+        <p>
+          Page <span id="pageNum"></span> of <span id="totalPageNum"></span>
+        </p>
+        <button onclick="upNumResponsive()">→</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <img
+          src="../source/Frame 54.png"
+          alt="Mankai Logo"
+          style="width: 60px"
+        />
+        <h4>
+          MANKAI ACADEMY - HỌC VIỆN ĐÀO TẠO PHÁT TRIỂN TIẾNG NHẬT THỰC CHIẾN
+        </h4>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="footer-content">
+        <div class="footer-left"></div>
+        <div class="footer-column">
+          <h5>THÔNG TIN LIÊN HỆ</h5>
+          <div class="contact-item">
+            <img src="../source/Address.png" alt="icon" class="contact-icon" />
+            <div>
+              <strong>Địa chỉ:</strong> Tòa Sông Đà, Đường Phạm Hùng, Mỹ
+              Đình,<br />
+              Nam Từ Liêm, Hà Nội
+            </div>
+          </div>
+
+          <p>
+            <strong
+              ><img class="img-footer" src="../source/hotline.png" alt="" />
+              Hotline:</strong
+            >
+            0835 652 538
+          </p>
+          <p>
+            <strong
+              ><img class="img-footer" src="../source/gmail.png" alt="" />
+              Email:</strong
+            >
+            support@mankai.edu.vn
+          </p>
+        </div>
+
+        <div class="footer-column column-mid">
+          <h5>THEO DÕI CHÚNG TÔI TẠI</h5>
+          <p>
+            <a href=""
+              ><img
+                class="icon-img"
+                src="../source/facebook.png"
+                alt="Facebook"
+            /></a>
+            <a href=""
+              ><img class="icon-img" src="../source/youtube.png" alt="YouTube"
+            /></a>
+          </p>
+        </div>
+
+        <div class="footer-column column-end">
+          <blockquote>
+            "Hạnh phúc là điểm khởi đầu của giáo dục và cũng là đích đến cuối
+            cùng. Giang, với hơn 10 năm kinh nghiệm giảng dạy và luyện thi JLPT,
+            mong muốn giúp các bạn rút ngắn thời gian, vượt qua khó khăn trong
+            việc học tiếng Nhật, và chinh phục tấm bằng JLPT. Hãy biến học tập
+            thành không chỉ là mục tiêu phát triển bản thân mà còn là hành trình
+            hạnh phúc để hiện thực hóa những giấc mơ.”
+          </blockquote>
+          <cite>— Anh Nguyễn Viết Lâm – CEO Rikkei Academy</cite>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © 2024 by Rikkei Academy - Rikkei Education - All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="../JS/course.js"></script>
+  </body>
+</html>

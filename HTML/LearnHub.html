@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài học</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: white;
+      }
+
+      .navbar {
+        position: relative;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        border-bottom: 0.0625rem solid #ddd;
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+        margin-left: 7.5rem;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+      }
+
+      .logo img {
+        width: 3.5rem;
+        height: 4rem;
+      }
+
+      .text-logo small {
+        color: gray;
+        font-weight: normal;
+      }
+
+      .menu {
+        display: flex;
+        gap: 1.25rem;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: #333;
+        font-size: 0.875rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .menu a:hover {
+        color: black;
+      }
+      .menu img {
+        width: 1.5rem;
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.125rem;
+        margin-right: 5rem;
+      }
+
+      .right img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      .avatar {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .dropdown {
+        display: none;
+
+        border: 1px solid #ddd;
+        background-color: white;
+        border-radius: 5px;
+        padding: 6px;
+        position: absolute;
+        top: 90px;
+        right: 100px;
+        width: 200px;
+      }
+
+      .dropdown a {
+        color: black;
+        display: block;
+
+        margin-top: 10px;
+        padding: 10px;
+
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .dropdown a:hover {
+        color: black;
+        background-color: gainsboro;
+      }
+
+      .show {
+        display: block;
+      }
+
+      img {
+        cursor: pointer;
+      }
+
+      .on {
+        color: blue;
+      }
+      .menu-icon {
+        display: none;
+        cursor: pointer;
+      }
+      .menu-icon img {
+        width: 2rem;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+
+      main {
+        flex: 1;
+        padding: 24px;
+      }
+
+      .breadcrumb {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .breadcrumb-left {
+        display: flex;
+        gap: 5px;
+      }
+
+      .breadcrumb a {
+        text-decoration: none;
+        color: #ff6600;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 16px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #a7a7a7;
+        font-weight: bold;
+      }
+      .nav-links a:hover {
+        color: #ff6600;
+      }
+      .nav-links a:hover img {
+        filter: brightness(0) saturate(100%) invert(46%) sepia(96%)
+          saturate(2781%) hue-rotate(1deg) brightness(104%) contrast(105%);
+      }
+      .nav-left a img {
+        margin-right: 10px;
+      }
+      .nav-right a img {
+        margin-left: 10px;
+        position: relative;
+        top: 0.5px;
+      }
+
+      .breadcrumb-icon {
+        width: 11.76px;
+        height: 11.76px;
+      }
+
+      .video-img {
+        width: 1300px;
+        max-width: 100%;
+      }
+      .video p img{
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 4px;
+      }
+      .description{
+        background-color: #FAFAFA;
+        border-radius: 5px;
+        padding: 10px;
+      }
+    .sidebar {
+  width: 300px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  color: #e26e38;
+  margin-bottom: 20px;
+}
+
+.section-header {
+  font-weight: bold;
+  padding: 10px 0;
+  cursor: pointer;
+  color: #111;
+  position: relative;
+}
+
+.section-header::after {
+  content: "";
+  float: right;
+  width: 10.56px;
+  height: 16px;
+  background-image: url('../source/vectosidebar.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+  position: relative;
+  top: 5px;
+}
+
+.section.collapsed .section-header::after {
+  transform: rotate(180deg) translateY(10px);
+  
+}
+
+
+.lesson-list {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0;
+}
+
+.lesson {
+  padding: 8px 12px;
+  margin: 5px 0;
+
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.lesson:hover {
+  background-color: #f5f5f5;
+}
+
+.lesson.active {
+  background-color: #fdeae1;
+  border-left: 4px solid #e26e38;
+ 
+}
+.menu-sidebar{
+        width: 24px;
+        height: 24px;
+        position: relative;
+        top: 5px;
+        margin-right: 10px;
+         filter: brightness(0) saturate(100%) invert(46%) sepia(96%)
+          saturate(2781%) hue-rotate(1deg) brightness(104%) contrast(105%);
+}
+
+.lesson-title {
+  font-weight: 600;
+  margin: 6px 15px;
+  cursor: pointer;
+}
+.icon-sidebar{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  position: relative;
+  top: 5px;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="left">
+          <div class="logo">
+            <img src="../source/Logo & menu.png" alt="logo" />
+          </div>
+          <nav class="menu">
+            <a href="../HTML/home.html"
+              ><img src="../source/home.png" alt="" /> Trang chủ</a
+            >
+            <a href="../HTML/post.html"
+              ><img src="../source/book.png" alt="" /> Bài viết</a
+            >
+          </nav>
+        </div>
+        <div class="right">
+          <a href="searchPage.html"
+            ><img src="../source/search-normal.png" id="search-toggle" alt=""
+          /></a>
+          <i
+            class="fa-solid fa-bell"
+            id="noticeBell"
+            onclick="toggleNotice()"
+          ></i>
+          <img
+            src="../source/Dropdown.png"
+            alt="avatar"
+            class="avatar"
+            onclick="toggleDropdown()"
+          />
+          <div class="dropdown" id="dropdownList">
+            <a href="home.html"
+              ><img src="../source/Dropdown.png" alt="avatar" class="avatar"
+            /></a>
+            <hr />
+            <a href="location.html">Hồ sơ</a>
+            <a href="sdad.html">Khóa học</a>
+            <hr />
+            <a id="logout" href="login.html"
+              ><i class="fa-solid fa-right-from-bracket"></i
+              ><span>Đăng xuất</span></a
+            >
+          </div>
+        </div>
+        <div class="menu-icon"><img src="../source/menu.png" alt="" /></div>
+      </div>
+    </header>
+
+    <div class="container">
+      <main>
+        <div class="breadcrumb">
+          <div class="breadcrumb-left">
+            <a href="#">Trang chủ</a> / <a href="#">Web Frontend Fundamental</a>
+          </div>
+          <div class="nav-links">
+            <div class="nav-left">
+              <a href="#"
+                ><img
+                  src="../source/Iconleft.png"
+                  class="breadcrumb-icon"
+                  alt=""
+                />
+                Bài trước</a
+              >
+            </div>
+            <div class="nav-right">
+              <a href="#"
+                >Bài tiếp theo
+                <img
+                  src="../source/Iconright1.png"
+                  class="breadcrumb-icon"
+                  alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <img src="../source/Video player.png" class="video-img" alt="" />
+          <h2>Form & Table</h2>
+          <p><img src="../source/clock.png" alt=""> 24 tháng 6 năm 2023</p>
+        </div>
+
+       <div class="description">
+  <h3>Mô tả</h3>
+
+  <p>
+    <h4>Lorem ipsum dolor sit amet consectetur:</h4>
+    Ornare eu elementum felis porttitor nunc tortor. Ornare neque accumsan metus nulla ultricies maecenas rhoncus ultrices cras.
+    Vestibulum varius adipiscing ipsum pharetra. Semper ullamcorper malesuada ut auctor scelerisque. Sit morbi pellentesque adipiscing pellentesque habitant ullamcorper est.
+    In dolor sit platea faucibus ut dignissim pulvinar...
+  </p>
+
+  <div id="more-text" style="display: none;">
+    <h4>Semper lacinia non lectus mauris sed eget scelerisque facilisis donec:</h4>
+    <ul>
+      <li>Tellus molestie leo gravida feugiat. Ipsum est lacus lobortis accumsan eget.</li>
+      <li>Sit parturient viverra ut cursus. Vestibulum non et ullamcorper fermentum fringilla est.</li>
+      <li>
+        A nullam diam rhoncus pellentesque eleifend risus ut libero. Eget gravida fermentum nisi dignissim senectus pellentesque egestas...
+      </li>
+    </ul>
+    <h4>Lorem ipsum dolor sit amet consectetur:</h4>
+    Ornare eu elementum felis porttitor nunc tortor. Ornare neque accumsan metus nulla ultricies maecenas rhoncus ultrices cras.
+    Vestibulum varius adipiscing ipsum pharetra. Semper ullamcorper malesuada ut auctor scelerisque. Sit morbi pellentesque adipiscing pellentesque habitant ullamcorper est.
+    In dolor sit platea faucibus ut dignissim pulvinar.
+      <h4>Semper lacinia non lectus mauris sed eget scelerisque facilisis donec:</h4>
+    <ul>
+      <li>Tellus molestie leo gravida feugiat. Ipsum est lacus lobortis accumsan eget.</li>
+      <li>Sit parturient viverra ut cursus. Vestibulum non et ullamcorper fermentum fringilla est.</li>
+      <li>
+        A nullam diam rhoncus pellentesque eleifend risus ut libero. Eget gravida fermentum nisi dignissim senectus pellentesque egestas...
+      </li>
+    </ul>
+    <p>
+      Adipiscing vel nunc integer mi montes cras magna. Est vitae posuere quis sed quam vivamus urna lorem dolor...
+    </p>
+  </div>
+  <a href="#" id="toggle-btn">Xem thêm</a>
+</div>
+
+      </main>
+
+      <aside class="sidebar">
+    <h2><img src="../source/menu.png" class="menu-sidebar" alt=""> Danh sách bài học</h2>
+<!-- session1 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">Session 1: Từ vựng</div>
+       <div class="lesson-group">
+        <div class="lesson-title" onclick="toggleLesson(this)">Lesson 1: Phó từ láy</div>
+        <ul class="lesson-list">
+          <li class="lesson active" onclick="selectLesson(this)"><img class="icon-sidebar" src="../source/icon-sidebar.png" alt="">Form & Table</li>
+          <li class="lesson" onclick="selectLesson(this)"><img class="icon-sidebar" src="../source/document-text.png" alt="">Luyện tập Function</li>
+          <li class="lesson" onclick="selectLesson(this)"><img class="icon-sidebar" src="../source/icon-sidebar.png" alt="">Tổng quan về Git</li>
+          <li class="lesson" onclick="selectLesson(this)"><img class="icon-sidebar"src="../source/flash-circle.png" alt="">[Quiz] JS Cơ bản</li>
+        </ul>
+      </div>
+         <div class="lesson-group">
+        <div class="lesson-title" onclick="toggleLesson(this)">Lesson 2: Tính từ</div>
+        <ul class="lesson-list">
+          <li class="lesson" onclick="selectLesson(this)"><img class="icon-sidebar" src="../source/icon-sidebar.png" alt="">Basic HTML Tag</li>
+          <li class="lesson" onclick="selectLesson(this)"><img class="icon-sidebar" src="../source/flash-circle.png" alt="">[Quiz] JS Nâng cao</li>
+        </ul>
+      </div>
+      <div class="lesson-group">
+        <div class="lesson-title" onclick="toggleLesson(this)">Lesson 3: Danh từ</div>
+        <ul class="lesson-list">
+          <li class="lesson" onclick="selectLesson(this)"><img src="../source/icon-sidebar.png" alt="" class="icon-sidebar"> HTML Layout Structure</li>
+          <li class="lesson" onclick="selectLesson(this)"><img src="../source/flash-circle.png" alt="" class="icon-sidebar"> [Quiz] JS Cơ bản</li>
+          <li class="lesson" onclick="selectLesson(this)"><img src="../source/icon-sidebar.png" alt="" class="icon-sidebar"> HTML In Real World</li>
+          <li class="lesson" onclick="selectLesson(this)"><img src="../source/flash-circle.png" alt="" class="icon-sidebar"> [Quiz] Array Methods</li>
+        </ul>
+      </div>
+      <div class="lesson-group">
+        <div class="lesson-title" onclick="toggleLesson(this)">Bài tập về nhà</div>
+        <ul class="lesson-list">
+          <li class="lesson" onclick="selectLesson(this)"><img src="../source/message-programming.png" alt="" class="icon-sidebar"> Các thẻ so sánh chuẩn</li>
+          <li class="lesson" onclick="selectLesson(this)"><img src="../source/message-programming.png" alt="" class="icon-sidebar">Tạo trang CV cá nhân</li>
+          <li class="lesson" onclick="selectLesson(this)"><img src="../source/message-programming.png" alt="" class="icon-sidebar">Kết hợp nav + ul để làm menu</li>
+          <li class="lesson" onclick="selectLesson(this)"><img src="../source/message-programming.png" alt="" class="icon-sidebar">Thực hiện thẻ img</li>
+        </ul>
+      </div>
+    </div>
+    <!-- session 2 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">Session 2:Chữ Hán</div>
+       <div class="lesson-group">
+        <div class="lesson-title" onclick="toggleLesson(this)">Lesson 1: HTMl Introduction</div>
+       
+      </div>
+         <div class="lesson-group">
+        <div class="lesson-title" onclick="toggleLesson(this)">Lesson 2: HTML Basic</div>
+        
+      </div>
+      <div class="lesson-group">
+        <div class="lesson-title" onclick="toggleLesson(this)">Lesson 3: Form & Table</div>
+      </div>
+    
+    </div>
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">Session 3: Ngữ Pháp</div>
+    </div>
+  </aside>
+    </div>
+    <script>
+      // xem thêm 
+  const toggleBtn = document.getElementById("toggle-btn");
+  const moreText = document.getElementById("more-text");
+
+  toggleBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const isHidden = moreText.style.display === "none";
+
+    moreText.style.display = isHidden ? "block" : "none";
+    toggleBtn.textContent = isHidden ? "Ẩn bớt" : "Xem thêm";
+  });
+  
+  function toggleSection(header) {
+  const section = header.parentElement;
+  section.classList.toggle('collapsed');
+
+  const lessonGroups = section.querySelectorAll('.lesson-group');
+  lessonGroups.forEach(group => {
+    group.style.display = group.style.display === 'none' ? 'block' : 'none';
+  });
+}
+
+// Ẩn/hiện lesson-list 
+function toggleLesson(titleElement) {
+  const group = titleElement.parentElement;
+  const lessonList = group.querySelector('.lesson-list');
+
+  if (lessonList) {
+    lessonList.style.display = lessonList.style.display === 'none' ? 'block' : 'none';
+  }
+}
+
+// Hàm chọn bài học
+function selectLesson(el) {
+  const allLessons = document.querySelectorAll('.lesson');
+  allLessons.forEach(lesson => lesson.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// Khi load trang, mở tất cả section và hiển thị lesson-group (nhưng ẩn lesson-list)
+document.addEventListener('DOMContentLoaded', () => {
+  const allSections = document.querySelectorAll('.section');
+  allSections.forEach(section => {
+    section.classList.remove('collapsed');
+    const lessonGroups = section.querySelectorAll('.lesson-group');
+    lessonGroups.forEach(group => {
+      group.style.display = 'block'; 
+     
+    });
+  });
+});
+</script>
+
+  </body>
+</html>

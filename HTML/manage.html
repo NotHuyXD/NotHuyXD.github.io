@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang quản lý</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200 flex min-h-screen font-sans">
+
+    <!-- <header class="bg-white p-4 flex items-center justify-between lg:hidden shadow">
+        <button onclick="toggleSidebar()" class="text-gray-600 focus:outline-none">
+            ☰
+        </button>
+        <h1 class="text-lg font-semibold">Tổng quan</h1>
+        <select class="border px-2 py-1 rounded text-sm">
+            <option>Học kỳ 1</option>
+        </select>
+    </header> -->
+
+
+    <aside class="w-64 h-screen bg-white p-6 flex flex-col justify-between border-r">
+        <div>
+            <div class="mb-6 text-center">
+                <img src="/source/LogoRikkei.jpg" class="h-10 mx-auto mb-1" />
+            </div>
+            <nav class="flex flex-col gap-4 text-[15px] font-medium">
+
+                <a href="/HTML/manage.html" class="flex items-center px-3 py-2 rounded bg-red-50 text-red-700">
+                    <img src="/source/all_red.png" alt="Tổng quan" class="w-5 h-5 mr-2" />
+                    Tổng quan
+                </a>
+
+                <a href="/HTML/checkPoint.html"
+                    class="flex items-center px-3 py-2 rounded text-gray-700 hover:bg-gray-100">
+                    <img src="/source/point.png" alt="Xem điểm" class="w-5 h-5 mr-2" />
+                    Xem điểm
+                </a>
+
+                <a href="/HTML/schedule.html" class="flex items-center px-3 py-2 rounded text-gray-700 hover:bg-gray-100">
+                    <img src="/source/schedule.png" alt="Điểm danh" class="w-5 h-5 mr-2" />
+                    Điểm danh
+                </a>
+
+                <a href="/HTML/homework.html"
+                    class="flex items-center px-3 py-2 rounded text-gray-700 hover:bg-gray-100">
+                    <img src="/source/test.png" alt="Nộp bài" class="w-5 h-5 mr-2" />
+                    Nộp bài
+                </a>
+            </nav>
+        </div>
+        <hr class="my-4 border-t border-gray-200" />
+        <div class="mt-8 text-sm">
+            <div style="padding-bottom: 35px;">
+                <div class="flex items-center mb-4">
+                    <img src="/source/Avatar.png" class="w-12 h-12 rounded-full mr-3" />
+                    <div>
+                        <p class="font-semibold">Nguyễn Ánh Viên</p>
+                        <p class="text-gray-500 text-xs">PIT1242</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center mb-2">
+                    <img src="/source/schedule.png" alt="" class="w-4 h-4 mr-2" />
+                    <p class="text-sm"><span class="font-semibold">Ngày sinh:</span> 15/03/2006</p>
+                </div>
+
+                <div class="flex items-center mb-2">
+                    <img src="/source/sms.png" alt="" class="w-4 h-4 mr-2" />
+                    <p class="text-sm"><span class="font-semibold">Email:</span> vien@gmail.com</p>
+                </div>
+
+                <div class="flex items-center">
+                    <img src="/source/call.png" alt="" class="w-4 h-4 mr-2" />
+                    <p class="text-sm"><span class="font-semibold">Số điện thoại:</span> 0981 965 304</p>
+                </div>
+            </div>
+
+            <hr class="my-4 border-t border-gray-200" />
+            <div style="display: flex;">
+                <img src="/source/logout.png" class="w-4 h-4 mr-2 mt-1">
+                <a href="" class="text-red-600">Log Out</a>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 p-6 mt-16 lg:mt-0 w-full overflow-auto">
+        <div class="hidden lg:flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-semibold">Tổng quan</h1>
+            <select class="border px-3 py-1 rounded text-sm">
+                <option>Học kỳ 1</option>
+            </select>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div class="relative rounded-lg overflow-hidden h-28">
+                <img src="/source/Display1.jpg" class="absolute inset-0 w-full h-full object-cover" />
+                <div class="relative z-10 text-white p-4">
+                    <div class="flex justify-between items-center">
+                        <p class="text-sm">Môn học theo lộ trình</p>
+                        <img src="/source/sticker.png" class="w-5 h-5" />
+                    </div>
+                    <h3 class="text-2xl font-bold pt-3">3/3</h3>
+                </div>
+            </div>
+
+            <div class="relative rounded-lg overflow-hidden h-28">
+                <img src="/source/display2.jpg" class="absolute inset-0 w-full h-full object-cover" />
+                <div class="relative z-10 text-white p-4">
+                    <div class="flex justify-between items-center">
+                        <p class="text-sm">Môn học lại</p>
+                        <img src="/source/undo.png" class="w-5 h-5" />
+                    </div>
+                    <h3 class="text-2xl font-bold pt-3">1/3</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="bg-white p-6 rounded-xl shadow">
+            <div class="flex justify-between items-center mb-6">
+                <select class="border px-3 py-1 rounded text-sm font-semibold border-0">
+                    <option>React.js</option>
+                    <option>Node.js</option>
+                    <option>HTML/CSS</option>
+                </select>
+                <button class="text-sm px-3 py-1 rounded font-bold bg-gray-100">Chi tiết điểm</button>
+            </div>
+            <span class="bg-green-600 text-white px-2 py-1 text-xs rounded">Đủ điều kiện</span>
+
+            <div class="w-full flex justify-center">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 pb-6 text-center">
+
+                    <!-- Circle 1 -->
+                    <div>
+                        <div class="relative group w-40 h-40 mx-auto">
+                            <svg class="transform -rotate-90" width="160" height="160">
+                                <circle cx="80" cy="80" r="65" stroke="#fee2e2" stroke-width="12" fill="none" />
+                                <circle cx="80" cy="80" r="65" stroke="#dc2626" stroke-width="12" fill="none"
+                                    stroke-dasharray="408.4" stroke-dashoffset="40.84" />
+                            </svg>
+                            <div
+                                class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded shadow opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                90%
+                            </div>
+                        </div>
+                        <p class="mt-2 text-sm font-medium">Tỉ lệ đi học</p>
+                        <div class="flex justify-center gap-4 text-sm mt-2">
+                            <div class="flex items-center gap-1 text-gray-600">
+                                <span class="w-2 h-2 rounded-full bg-red-600"></span> <span>Đi học đủ</span>
+                            </div>
+                            <div class="flex items-center gap-1 text-gray-400">
+                                <span class="w-2 h-2 rounded-full bg-red-100"></span> <span>Nghỉ</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Circle 2 -->
+                    <div>
+                        <div class="relative group w-40 h-40 mx-auto">
+                            <svg class="transform -rotate-90" width="160" height="160">
+                                <circle cx="80" cy="80" r="65" stroke="#e9e8ee" stroke-width="12" fill="none" />
+                                <circle cx="80" cy="80" r="65" stroke="#231651" stroke-width="12" fill="none"
+                                    stroke-dasharray="408.4" stroke-dashoffset="61.26" />
+                            </svg>
+                            <div
+                                class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded shadow opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                85%
+                            </div>
+                        </div>
+                        <p class="mt-2 text-sm font-medium">Tỉ lệ đúng giờ</p>
+                        <div class="flex justify-center gap-4 text-sm mt-2">
+                            <div class="flex items-center gap-1 text-[#231651]">
+                                <span class="w-2 h-2 rounded-full bg-[#231651]"></span> <span>Đúng giờ</span>
+                            </div>
+                            <div class="flex items-center gap-1 text-[#e9e8ee]">
+                                <span class="w-2 h-2 rounded-full bg-[#e9e8ee]"></span> <span>Trễ</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Circle 3 -->
+                    <div>
+                        <div class="relative group w-40 h-40 mx-auto">
+                            <svg class="transform -rotate-90" width="160" height="160">
+                                <circle cx="80" cy="80" r="65" stroke="#F4F4F4" stroke-width="12" fill="none" />
+                                <circle cx="80" cy="80" r="65" stroke="#676767" stroke-width="12" fill="none"
+                                    stroke-dasharray="408.4" stroke-dashoffset="134.77" />
+                            </svg>
+                            <div
+                                class="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded shadow opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                67%
+                            </div>
+                        </div>
+                        <p class="mt-2 text-sm font-medium">Tỉ lệ hoàn thành</p>
+                        <div class="flex justify-center gap-4 text-sm mt-2">
+                            <div class="flex items-center gap-1 text-[#676767]">
+                                <span class="w-2 h-2 rounded-full bg-[#676767]"></span> <span>Hoàn thành</span>
+                            </div>
+                            <div class="flex items-center gap-1 text-[#F4F4F4]">
+                                <span class="w-2 h-2 rounded-full bg-[#F4F4F4]"></span> <span>Chưa hoàn thành</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("-translate-x-full");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xem điểm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/CSS/checkPoint.css">
+</head>
+
+<body class="bg-gray-200 flex min-h-screen font-sans">
+    <aside class="w-64 bg-white p-6 flex flex-col justify-between border-r">
+        <div>
+            <div class="mb-6 text-center">
+                <img src="/source/LogoRikkei.jpg" class="h-10 mx-auto mb-1" />
+            </div>
+            <nav class="flex flex-col gap-4 text-[15px] font-medium">
+
+                <a href="/HTML/manage.html" class="flex items-center px-3 py-2 rounded text-gray-700 hover:bg-gray-100">
+                    <img src="/source/all.png" alt="Tổng quan" class="w-5 h-5 mr-2" />
+                    Tổng quan
+                </a>
+
+                <a href="/HTML/checkPoint.html" class="flex items-center px-3 py-2 rounded bg-red-50 text-red-700">
+                    <img src="/source/point_red.png" alt="Xem điểm" class="w-5 h-5 mr-2" />
+                    Xem điểm
+                </a>
+
+                <a href="/HTML/schedule.html"
+                    class="flex items-center px-3 py-2 rounded text-gray-700 hover:bg-gray-100">
+                    <img src="/source/schedule.png" alt="Điểm danh" class="w-5 h-5 mr-2" />
+                    Điểm danh
+                </a>
+
+                <a href="/HTML/homework.html"
+                    class="flex items-center px-3 py-2 rounded text-gray-700 hover:bg-gray-100">
+                    <img src="/source/test.png" alt="Nộp bài" class="w-5 h-5 mr-2" />
+                    Nộp bài
+                </a>
+            </nav>
+        </div>
+        <hr class="my-4 border-t border-gray-200" />
+        <div class="mt-8 text-sm">
+            <div style="padding-bottom: 35px;">
+                <div class="flex items-center mb-4">
+                    <img src="/source/Avatar.png" class="w-12 h-12 rounded-full mr-3" />
+                    <div>
+                        <p class="font-semibold">Nguyễn Ánh Viên</p>
+                        <p class="text-gray-500 text-xs">PIT1242</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center mb-2">
+                    <img src="/source/schedule.png" alt="" class="w-4 h-4 mr-2" />
+                    <p class="text-sm"><span class="font-semibold">Ngày sinh:</span> 15/03/2006</p>
+                </div>
+
+                <div class="flex items-center mb-2">
+                    <img src="/source/sms.png" alt="" class="w-4 h-4 mr-2" />
+                    <p class="text-sm"><span class="font-semibold">Email:</span> vien@gmail.com</p>
+                </div>
+
+                <div class="flex items-center">
+                    <img src="/source/call.png" alt="" class="w-4 h-4 mr-2" />
+                    <p class="text-sm"><span class="font-semibold">Số điện thoại:</span> 0981 965 304</p>
+                </div>
+            </div>
+
+            <hr class="my-4 border-t border-gray-200" />
+            <div style="display: flex;">
+                <img src="/source/logout.png" class="w-4 h-4 mr-2 mt-1">
+                <a href="" class="text-red-600">Log Out</a>
+            </div>
+        </div>
+    </aside>
+
+    <div class="main">
+        <div class="title"
+            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; margin: 15px 20px;">
+            <span style="font-weight: bold; font-size: 24px;">Bảng điểm</span>
+            <select
+                style="border-radius: 8px; border: 1px solid #ccc; font-size: 15px; font-weight: lighter; padding: 5px 20px 5px 10px;">
+                <option>Học kỳ 1</option>
+                <option>Học kỳ 2</option>
+            </select>
+        </div>
+        <div class="content">
+            <div style="max-height: 95%; overflow-y: auto; border-radius: 10px;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead style="position: sticky; top: 0; background-color: #ffe4e4;">
+                        <tr>
+                            <th>STT</th>
+                            <th>Môn học</th>
+                            <th>HK1</th>
+                            <th>HK2</th>
+                            <th>Project</th>
+                            <th>Tổng điểm</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>HTML</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Node.js</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>React.js</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Web Frontend Fundamental</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>HTML</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Node.js</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>React.js</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Web Frontend Fundamental</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>HTML</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Node.js</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>React.js</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Web Frontend Fundamental</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>HTML</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -27,6 +27,8 @@ let responsiveCurrentPage=document.getElementById('pageNum');
 responsiveCurrentPage.innerText=1;
 
 window.onload()=function(){
+    renderCourse();
+    renderPagin();
     document.getElementById('username').innerHTML=currentUser.surname + " " + currentUser.name;
     document.getElementById('name').innerHTML=currentUser.name;
     document.getElementById('responsiveUsername').innerHTML=currentUser.surname + " " + currentUser.name;

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="../CSS/Article_Details.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="left">
+          <div class="logo">
+            <img src="../source/Logo & menu.png" alt="logo" />
+          </div>
+          <nav class="menu">
+            <a href="../HTML/home.html"
+              ><img src="../source/home.png" alt="" /> Trang chủ</a
+            >
+            <a href="../HTML/post.html"
+              ><img src="../source/book.png" alt="" /> Bài viết</a
+            >
+          </nav>
+        </div>
+        <div class="right">
+          <a href="searchPage.html"
+            ><img src="../source/search-normal.png" id="search-toggle" alt=""
+          /></a>
+          <i
+            class="fa-solid fa-bell"
+            id="noticeBell"
+            onclick="toggleNotice()"
+          ></i>
+          <img
+            src="../source/Dropdown.png"
+            alt="avatar"
+            class="avatar"
+            onclick="toggleDropdown()"
+          />
+          <div class="dropdown" id="dropdownList">
+            <a href="home.html">
+              <img src="../source/Dropdown.png" alt="avatar" class="avatar" />
+              <span id="username"></span>
+            </a>
+            <hr />
+            <a href="information.html">Hồ sơ</a>
+            <a href="course.html">Khóa học</a>
+
+            <hr />
+            <a id="logout" href="login.html"
+              ><i class="fa-solid fa-right-from-bracket"></i
+              ><span>Đăng xuất</span></a
+            >
+          </div>
+        </div>
+        <div class="menu-icon" onclick="toggleResponsive()">
+          <img src="../source/menu.png" alt="" />
+        </div>
+        <div class="dropdownResponsive" id="responsiveList">
+          <a href="../HTML/home.html"
+            ><img src="../source/home.png" alt="" /> Trang chủ</a
+          >
+          <a href="../HTML/post.html"
+            ><img src="../source/book.png" alt="" /> Bài viết</a
+          >
+          <hr />
+          <a href="information.html">Hồ sơ</a>
+          <a href="course.html">Khóa học</a>
+
+          <hr />
+          <a href="home.html">
+            <img src="../source/Dropdown.png" alt="avatar" class="avatar" />
+            <span id="responsiveUsername"></span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="box-content">
+      <div class="breadcrumb">
+        <a href="../HTML/home.html">Trang chủ</a> <span>/</span>
+        <a href="../HTML/post.html">Bài viết</a>
+        <span>/</span>
+        <a href="../HTML/Git_Detail.html"><strong>Chi tiết bài viết</strong></a>
+      </div>
+
+      <h1>Những kỹ năng sử dụng Git cơ bản</h1>
+
+      <div class="meta">
+        <div class="tag">Git</div>
+        <div>
+          <img class="tag-img" src="../source/clock.png" alt="" /> 8 tháng trước
+        </div>
+        <div>
+          <img class="tag-img" src="../source/book2.png" alt="" /> 10-15 phút
+          đọc
+        </div>
+      </div>
+      <div class="underline"></div>
+    </div>
+
+    <main>
+      <div class="content">
+        <h3>Ornare eu elementum felis porttitor nunc</h3>
+        <p>
+          Ornare eu elementum felis porttitor nunc tortor. Ornare neque accumsan
+          metus nulla ultricies maecenas rhoncus ultrices cras. Vestibulum
+          varius adipiscing ipsum pharetra. Semper ullamcorper malesuada ut
+          auctor scelerisque. Sit morbi pellentesque adipiscing pellentesque
+          habitant ullamcorper est. In dolor sit platea faucibus ut dignissim
+          pulvinar.
+        </p>
+        <img src="../source/anh3.png" alt="" />
+        <h4>Lorem ipsum dolor sit amet consectetur:</h4>
+        <p>
+          Ornare eu elementum felis porttitor nunc tortor. Ornare neque accumsan
+          metus nulla ultricies maecenas rhoncus ultrices cras. Vestibulum
+          varius adipiscing ipsum pharetra. Semper ullamcorper malesuada ut
+          auctor scelerisque. Sit morbi pellentesque adipiscing pellentesque
+          habitant ullamcorper est. In dolor sit platea faucibus ut dignissim
+          pulvinar.
+        </p>
+        <h4>
+          Semper lacinia non lectus mauris sed eget scelerisque facilisis donec:
+        </h4>
+        <ul>
+          <li>Tellus molestie leo gravida feugiat...</li>
+          <li>Sit parturient viverra ut cursus...</li>
+          <li>A nullam diam rhoncus pellentesque eleifend...</li>
+        </ul>
+        <p>Adipiscing vel nunc integer mi montes cras magna...</p>
+        <img src="../source/Image2.png" alt="" />
+        <h3>Vestibulum varius adipiscing</h3>
+        <p>
+          Ornare eu elementum felis porttitor nunc tortor. Ornare neque accumsan
+          metus nulla ultricies maecenas rhoncus ultrices cras. Vestibulum
+          varius adipiscing ipsum pharetra. Semper ullamcorper malesuada ut
+          auctor scelerisque. Sit morbi pellentesque adipiscing pellentesque
+          habitant ullamcorper est. In dolor sit platea faucibus ut dignissim
+          pulvinar.
+        </p>
+        <h4>
+          Semper lacinia non lectus mauris sed eget scelerisque facilisis donec:
+        </h4>
+        <ul>
+          <li>Tellus molestie leo gravida feugiat...</li>
+          <li>Sit parturient viverra ut cursus...</li>
+          <li>A nullam diam rhoncus pellentesque eleifend...</li>
+        </ul>
+        <img src="../source/Image1.png" alt="" />
+        <h4>Lorem ipsum dolor sit amet consectetur:</h4>
+        <p>
+          Ornare eu elementum felis porttitor nunc tortor. Ornare neque accumsan
+          metus nulla ultricies maecenas rhoncus ultrices cras. Vestibulum
+          varius adipiscing ipsum pharetra. Semper ullamcorper malesuada ut
+          auctor scelerisque. Sit morbi pellentesque adipiscing pellentesque
+          habitant ullamcorper est. In dolor sit platea faucibus ut dignissim
+          pulvinar.
+        </p>
+      </div>
+
+      <div class="article">
+        <h3>Bài viết cùng chủ đề</h3>
+        <div class="article-list">
+          <div class="article-content">
+            <img src="../source/post.png" alt="Post preview" />
+            <div class="tag-acrticle">Git</div>
+            <h2>Những kỹ năng sử dụng Git cơ bản</h2>
+            <p>
+              Chào bạn! Nếu bạn đã là học viên khóa Pro của Rikkei Academy, chắc
+              hẳn bạn đã biết tới Git, việc sử dụng Git thông thạo không chỉ
+              giúp...
+            </p>
+            <div class="meta-acrticle">
+              <div>
+                <img class="img-acrticle" src="../source/clock.png" alt="" /> 8
+                tháng trước
+              </div>
+              <div>
+                <img class="img-acrticle" src="../source/book2.png" alt="" />
+                10-15 phút đọc
+              </div>
+            </div>
+          </div>
+
+          <div class="article-content">
+            <img src="../source/post.png" alt="Post preview" />
+            <div class="tag-acrticle">Git</div>
+            <h2>Những kỹ năng sử dụng Git cơ bản</h2>
+            <p>
+              Chào bạn! Nếu bạn đã là học viên khóa Pro của Rikkei Academy, chắc
+              hẳn bạn đã biết tới Git, việc sử dụng Git thông thạo không chỉ
+              giúp...
+            </p>
+            <div class="meta-acrticle">
+              <div>
+                <img class="img-acrticle" src="../source/clock.png" alt="" /> 8
+                tháng trước
+              </div>
+              <div>
+                <img class="img-acrticle" src="../source/book2.png" alt="" />
+                10-15 phút đọc
+              </div>
+            </div>
+          </div>
+
+          <div class="article-content">
+            <img src="../source/post.png" alt="Post preview" />
+            <div class="tag-acrticle">Git</div>
+            <h2>Những kỹ năng sử dụng Git cơ bản</h2>
+            <p>
+              Chào bạn! Nếu bạn đã là học viên khóa Pro của Rikkei Academy, chắc
+              hẳn bạn đã biết tới Git, việc sử dụng Git thông thạo không chỉ
+              giúp...
+            </p>
+            <div class="meta-acrticle">
+              <div>
+                <img class="img-acrticle" src="../source/clock.png" alt="" /> 8
+                tháng trước
+              </div>
+              <div>
+                <img class="img-acrticle" src="../source/book2.png" alt="" />
+                10-15 phút đọc
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-top">
+        <img
+          src="../source/Frame 54.png"
+          alt="Mankai Logo"
+          style="width: 60px"
+        />
+        <h4>
+          MANKAI ACADEMY - HỌC VIỆN ĐÀO TẠO PHÁT TRIỂN TIẾNG NHẬT THỰC CHIẾN
+        </h4>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="footer-content">
+        <div class="footer-left"></div>
+        <div class="footer-column">
+          <h5>THÔNG TIN LIÊN HỆ</h5>
+          <div class="contact-item">
+            <img src="../source/Address.png" alt="icon" class="contact-icon" />
+            <div>
+              <strong>Địa chỉ:</strong> Tòa Sông Đà, Đường Phạm Hùng, Mỹ
+              Đình,<br />
+              Nam Từ Liêm, Hà Nội
+            </div>
+          </div>
+
+          <p>
+            <strong
+              ><img class="img-footer" src="../source/hotline.png" alt="" />
+              Hotline:</strong
+            >
+            0835 652 538
+          </p>
+          <p>
+            <strong
+              ><img class="img-footer" src="../source/gmail.png" alt="" />
+              Email:</strong
+            >
+            support@mankai.edu.vn
+          </p>
+        </div>
+
+        <div class="footer-column column-mid">
+          <h5>THEO DÕI CHÚNG TÔI TẠI</h5>
+          <p>
+            <a href=""
+              ><img
+                class="icon-img"
+                src="../source/facebook.png"
+                alt="Facebook"
+            /></a>
+            <a href=""
+              ><img class="icon-img" src="../source/youtube.png" alt="YouTube"
+            /></a>
+          </p>
+        </div>
+
+        <div class="footer-column column-end">
+          <blockquote>
+            "Hạnh phúc là điểm khởi đầu của giáo dục và cũng là đích đến cuối
+            cùng. Giang, với hơn 10 năm kinh nghiệm giảng dạy và luyện thi JLPT,
+            mong muốn giúp các bạn rút ngắn thời gian, vượt qua khó khăn trong
+            việc học tiếng Nhật, và chinh phục tấm bằng JLPT. Hãy biến học tập
+            thành không chỉ là mục tiêu phát triển bản thân mà còn là hành trình
+            hạnh phúc để hiện thực hóa những giấc mơ.”
+          </blockquote>
+          <cite>— Anh Nguyễn Viết Lâm – CEO Rikkei Academy</cite>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © 2024 by Rikkei Academy - Rikkei Education - All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="../JS/post_detail.js"></script>
+  </body>
+</html>

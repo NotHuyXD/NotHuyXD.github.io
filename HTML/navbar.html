@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Navbar cơ bản</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="../CSS/home.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="left">
+          <div class="logo">
+            <img src="../source/Logo & menu.png" alt="logo" />
+          </div>
+          <nav class="menu">
+            <a href="#"><img src="../source/home.png" alt="" /> Trang chủ</a>
+            <a href="#"><img src="../source/book.png" alt="" /> Bài viết</a>
+          </nav>
+        </div>
+        <div class="right">
+          <a href="searchPage.html"
+            ><img src="../source/search-normal.png" id="search-toggle" alt=""
+          /></a>
+          <i class="fa-solid fa-bell" onclick="toggleNotice()"></i>
+          <img
+            src="../source/Dropdown.png"
+            alt="avatar"
+            class="avatar"
+            onclick="toggleDropdown()"
+          />
+          <div class="dropdown" id="dropdownList">
+            <a href="home.html"
+              ><img src="../source/Dropdown.png" alt="avatar" class="avatar"
+            /></a>
+            <a href="location.html">Hồ sơ</a>
+            <a href="sdad.html">Khóa học</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script src="../JS/navbar.js"></script>
+  </body>
+</html>

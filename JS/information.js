@@ -18,6 +18,9 @@ function updateData(){
 window.onload = function(){
         if(!localStorage.getItem("currentUser") || localStorage.getItem("currentUser") === "[]"){
         window.location.href = "login.html";
+        document.getElementById('username').innerHTML=currentUser.surname + " " + currentUser.name;
+        document.getElementById('name').innerHTML=currentUser.name;
+        document.getElementById('responsiveUsername').innerHTML=currentUser.surname + " " + currentUser.name;
     }
     document.getElementById('surname').value=currentUser.surname;
     document.getElementById('name').value=currentUser.name;

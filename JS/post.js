@@ -30,6 +30,9 @@ responsiveCurrentPage.innerText=1;
 
 window.onload=function(){
     renderPost('Tất cả','120');
+    document.getElementById('username').innerHTML=currentUser.surname + " " + currentUser.name;
+    document.getElementById('name').innerHTML=currentUser.name;
+    document.getElementById('responsiveUsername').innerHTML=currentUser.surname + " " + currentUser.name;
 }
 
 function renderPagin(option, amount) {

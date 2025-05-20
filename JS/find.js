@@ -3,6 +3,12 @@ document.getElementById("searchButton").addEventListener("click", function () {
 
   let totalResults = 0;
 
+  window.onload()=function(){
+    document.getElementById('username').innerHTML=currentUser.surname + " " + currentUser.name;
+    document.getElementById('name').innerHTML=currentUser.name;
+    document.getElementById('responsiveUsername').innerHTML=currentUser.surname + " " + currentUser.name;
+  }
+
   // Lọc khóa học
   const courseCards = document.querySelectorAll(".card-body");
   courseCards.forEach((card) => {

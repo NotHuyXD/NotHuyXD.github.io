@@ -9,6 +9,7 @@ function toggleNotice(){
 
 window.onload = function(){
     document.getElementById('username').innerHTML=currentUser.surname + " " + currentUser.name;
+    document.getElementById('name').innerHTML=currentUser.name;
     document.getElementById('responsiveUsername').innerHTML=currentUser.surname + " " + currentUser.name;
 }
 

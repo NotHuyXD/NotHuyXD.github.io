@@ -87,6 +87,16 @@ const users = [
         password: "12345678",
         role: "User",
     },
+    {
+        name: "Gia Huy",
+        surname: "Dương",
+        email: "duonggiahuy123@gmail.com",
+        phone: "0123456789",
+        birthdate: "12/10/2006",
+        id: "1234",
+        password: "12345678",
+        role: "Admin",
+    },
 ];
 localStorage.setItem("users", JSON.stringify(users));
 
